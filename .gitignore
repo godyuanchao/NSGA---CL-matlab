@@ -1,0 +1,18 @@
+# MATLAB Autosave files
+*.asv
+
+# Result files (CSV, MAT)
+*.csv
+*.mat
+# Keep specific MAT files if they are strictly required inputs (currently none identified)
+
+# Image files
+*.png
+*.jpg
+*.jpeg
+*.fig
+*.tiff
+
+# System files
+.DS_Store
+Thumbs.db
