@@ -10,8 +10,7 @@ This repository contains the source code for the paper "Enhancing Multi-Objectiv
 
 ### Experiments & Analysis
 - **`compare_algorithms.m`**: Main comparison script. Runs both algorithms 30 times with fixed random seeds to ensure fair comparison and generates statistical results (Mean +/- Std).
-- **`run_ablation_experiment.m`**: Performs ablation studies to validate the effectiveness of specific modules (Crossover, Mutation, Selection).
-- **`run_sensitivity_analysis.m`**: Conducts sensitivity analysis on hyperparameter configurations.
+
 
 ### Helper Functions
 - **`tournamentsel_cl.m`**: Contrastive learning enhanced tournament selection operator.
@@ -49,8 +48,6 @@ To ensure a fair comparison, both the baseline NSGA-II and the proposed NSGA-II-
 ### Random Seeds
 - **Comparison Experiments**: The `compare_algorithms.m` script explicitly sets the random seed for each run to ensure that both algorithms start from the same initial population and face the same stochastic conditions.
     - Formula: `current_seed = run_idx * 2` (where `run_idx` goes from 1 to 30).
-- **Ablation & Sensitivity**: These scripts also use fixed seeds for each variant/configuration to guarantee consistent results across different runs.
-
 ## Usage Instructions
 
 ### 1. Run Algorithm Comparison
@@ -62,22 +59,6 @@ run('compare_algorithms.m')
 - `nsga2_metrics.csv` / `nsga2_cl_metrics.csv`: Iteration-wise metrics.
 - `comparison_results.mat`: Statistical summary.
 - Console output showing Mean +/- Std for Spacing, Convergence, and HV.
-
-### 2. Run Ablation Study
-To reproduce the ablation experiment results:
-```matlab
-run('run_ablation_experiment.m')
-```
-*Outputs:*
-- `ablation_study_results.csv`: Summary of performance for different algorithm variants.
-
-### 3. Run Sensitivity Analysis
-To reproduce the sensitivity analysis results:
-```matlab
-run('run_sensitivity_analysis.m')
-```
-*Outputs:*
-- `sensitivity_analysis_results.csv`: Performance metrics under different weight configurations.
 
 ## Contact
 For any questions regarding the code or the paper, please contact the authors via email.
